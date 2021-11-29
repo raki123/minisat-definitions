@@ -49,7 +49,6 @@ int main(int argc, char* argv[]) {
       S.addClause(Minisat::mkLit(v, true), Minisat::mkLit(v+vars), Minisat::mkLit(v+2*vars, true));
     }
   }
-  S.toDimacs("def.cnf");
   // iterate over all the variables and check whether they are defined
   for (int v = 1; v <= vars; v++) {
     if (!std::binary_search(inputs.begin(), inputs.end(), v)) {
