@@ -1,8 +1,8 @@
 #ifndef Util_h
 #define Util_h
 
-#include "../minisat/mtl/Vec.h"
-#include "../minisat/core/SolverTypes.h"
+#include "../minisat/minisat/mtl/Vec.h"
+#include "../minisat/minisat/core/SolverTypes.h"
 
 #include <vector>
 

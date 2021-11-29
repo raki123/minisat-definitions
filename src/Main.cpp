@@ -1,6 +1,6 @@
 #include "Parser.h"
 #include "Util.h"
-#include "../minisat/core/Solver.h"
+#include "../minisat/minisat/core/Solver.h"
 
 #include <algorithm>
 #include <iostream>

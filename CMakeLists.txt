@@ -8,11 +8,13 @@ set(CMAKE_CXX_FLAGS "-std=c++11 -O3 -Wall -Wextra -Wshadow -g -Wfatal-errors -Wn
 SET(CMAKE_C_FLAGS "-std=c99 -Wall -msse4.1 -mpclmul")
 
 add_subdirectory(minisat)
-find_library(MINISAT_LIB minisat)
+
+include_directories(minisat)
+
 
 SET(SOURCES 
 	src/Parser.cpp
 )
 
 add_executable (defined src/Main.cpp ${SOURCES})
-target_link_libraries(defined ${MINISAT_LIB})
+target_link_libraries(defined minisat-lib-static)
