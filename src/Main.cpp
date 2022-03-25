@@ -7,7 +7,9 @@
 
 int main(int argc, char* argv[]) {
 
-  auto [vars, cnf] = parse_dimacs(argv[1]);
+  std::pair<int,std::vector<std::vector<int>>> dimacs = parse_dimacs(argv[1]);
+  int vars = dimacs.first;
+  std::vector<std::vector<int>> cnf = dimacs.second;
   std::vector<int> inputs = parse_vars(argv[2]);
   std::sort(inputs.begin(), inputs.end());
 
